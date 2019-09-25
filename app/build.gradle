@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.amazonaws.appsync'
 
 android {
     compileSdkVersion 28
@@ -25,4 +26,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    //Base SDK
+    implementation 'com.amazonaws:aws-android-sdk-core:2.15.2'
+    //AppSync SDK
+    implementation 'com.amazonaws:aws-android-sdk-appsync:2.9.0'
+    implementation 'com.amazonaws:aws-android-sdk-appsync-api:2.9.0'
+    implementation 'com.amazonaws:aws-android-sdk-appsync-runtime:2.9.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }

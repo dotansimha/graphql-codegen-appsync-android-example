@@ -1,0 +1,28 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateProduct($input: CreateProductInput!) {
+  createProduct(input: $input) {
+    id
+    title
+    content
+    price
+    rating
+  }
+}
+mutation UpdateProduct($input: UpdateProductInput!) {
+  updateProduct(input: $input) {
+    id
+    title
+    content
+    price
+    rating
+  }
+}
+mutation DeleteProduct($input: DeleteProductInput!) {
+  deleteProduct(input: $input) {
+    id
+    title
+    content
+    price
+    rating
+  }
+}
