@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - "https://sjwxbg4w3zbw3mxw5aco375kgm.appsync-api.us-east-1.amazonaws.com/graphql":
+      headers:
+        'x-api-key': da2-w2cgge6qo5bbpnsvwrc2fiwmma
+
+documents: "app/src/main/graphql/com/amazonaws/amplify/generated/graphql/*.graphql"
+generates:
+  ./app/src/main/java/:
+    preset: java-apollo-android
+    config:
+      package: "com.amazonaws.amplify.generated.graphql"
+      typePackage: "type"
+      fragmentPackage: "com.amazonaws.amplify.generated.graphql"
+      scalars:
+        AWSDate: Long
+    plugins:
+      - java-apollo-android

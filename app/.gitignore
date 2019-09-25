@@ -1,1 +1,3 @@
 /build
+src/main/java/type
+src/main/java/com/amazonaws/amplify/generated/graphql

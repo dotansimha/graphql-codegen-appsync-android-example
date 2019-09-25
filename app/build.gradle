@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.amazonaws.appsync'
+
+preBuild.doFirst {
+    def proc = "yarn generate".execute()
+    proc.waitForProcessOutput(System.out, System.err)
+}
+
+build.dependsOn preBuild
 
 android {
     compileSdkVersion 28

@@ -1,0 +1,16 @@
+{
+  "name": "AppSyncAndroidCodegen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dotan Simha <dotansimha@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "graphql": "14.5.7",
+    "@graphql-codegen/cli": "1.2.2-alpha-5aed8345.17",
+    "@graphql-codegen/java-apollo-android": "1.2.2-alpha-5aed8345.17",
+    "@graphql-codegen/schema-ast": "1.2.2-alpha-5aed8345.17"
+  }
+}
