@@ -41,3 +41,10 @@ dependencies {
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }
+
+task cleanGeneratedCode(type: Delete) {
+    delete "${projectDir}/src/main/java/type"
+    delete "${projectDir}/src/main/java/com/amazonaws/amplify/generated"
+}
+clean.dependsOn cleanGeneratedCode
+

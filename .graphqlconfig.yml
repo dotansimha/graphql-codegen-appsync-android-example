@@ -1,5 +1,5 @@
 projects:
-  appsyncandroidcodege:
+  codegen:
     schemaPath: app/src/main/graphql/schema.json
     includes:
       - app/src/main/graphql/**/*.graphql
@@ -7,7 +7,9 @@ projects:
       - ./amplify/**
     extensions:
       amplify:
-        codeGenTarget: android
+        codeGenTarget: ''
         generatedFileName: ''
         docsFilePath: app/src/main/graphql/com/amazonaws/amplify/generated/graphql
-        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

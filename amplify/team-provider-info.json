@@ -1,14 +1,14 @@
 {
-    "dev": {
+    "codegen": {
         "awscloudformation": {
-            "AuthRoleName": "appsyncandroidcodege-dev-20190925095655-authRole",
-            "UnauthRoleArn": "arn:aws:iam::530095679374:role/appsyncandroidcodege-dev-20190925095655-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::530095679374:role/appsyncandroidcodege-dev-20190925095655-authRole",
+            "AuthRoleName": "codegen-codegen-20191023235517-authRole",
+            "UnauthRoleArn": "arn:aws:iam::529792743602:role/codegen-codegen-20191023235517-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::529792743602:role/codegen-codegen-20191023235517-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "appsyncandroidcodege-dev-20190925095655-deployment",
-            "UnauthRoleName": "appsyncandroidcodege-dev-20190925095655-unauthRole",
-            "StackName": "appsyncandroidcodege-dev-20190925095655",
-            "StackId": "arn:aws:cloudformation:us-east-1:530095679374:stack/appsyncandroidcodege-dev-20190925095655/a9e8f870-df61-11e9-b0aa-12c270bd7978"
+            "DeploymentBucketName": "codegen-codegen-20191023235517-deployment",
+            "UnauthRoleName": "codegen-codegen-20191023235517-unauthRole",
+            "StackName": "codegen-codegen-20191023235517",
+            "StackId": "arn:aws:cloudformation:us-east-1:529792743602:stack/codegen-codegen-20191023235517/3cebbe20-f62b-11e9-93f5-0ab87eb901cc"
         }
     }
 }

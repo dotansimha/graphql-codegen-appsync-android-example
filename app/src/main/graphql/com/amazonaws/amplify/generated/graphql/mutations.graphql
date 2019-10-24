@@ -1,28 +1,151 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateProduct($input: CreateProductInput!) {
-  createProduct(input: $input) {
+mutation CreateBlog($input: CreateBlogInput!) {
+  createBlog(input: $input) {
     id
-    title
-    content
-    price
-    rating
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
   }
 }
-mutation UpdateProduct($input: UpdateProductInput!) {
-  updateProduct(input: $input) {
+mutation UpdateBlog($input: UpdateBlogInput!) {
+  updateBlog(input: $input) {
     id
-    title
-    content
-    price
-    rating
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
   }
 }
-mutation DeleteProduct($input: DeleteProductInput!) {
-  deleteProduct(input: $input) {
+mutation DeleteBlog($input: DeleteBlogInput!) {
+  deleteBlog(input: $input) {
+    id
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
+  }
+}
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
     id
     title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+mutation UpdatePost($input: UpdatePostInput!) {
+  updatePost(input: $input) {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+mutation DeletePost($input: DeletePostInput!) {
+  deletePost(input: $input) {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+mutation CreateComment($input: CreateCommentInput!) {
+  createComment(input: $input) {
+    id
     content
-    price
-    rating
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+mutation UpdateComment($input: UpdateCommentInput!) {
+  updateComment(input: $input) {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+mutation DeleteComment($input: DeleteCommentInput!) {
+  deleteComment(input: $input) {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
   }
 }

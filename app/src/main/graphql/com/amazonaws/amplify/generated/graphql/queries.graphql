@@ -1,25 +1,103 @@
 # this is an auto generated file. This will be overwritten
-query GetProduct($id: ID!) {
-  getProduct(id: $id) {
+query GetBlog($id: ID!) {
+  getBlog(id: $id) {
     id
-    title
-    content
-    price
-    rating
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
   }
 }
-query ListProducts(
-  $filter: ModelProductFilterInput
+query ListBlogs(
+  $filter: ModelBlogFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listProducts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetPost($id: ID!) {
+  getPost(id: $id) {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+query ListPosts(
+  $filter: ModelPostFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetComment($id: ID!) {
+  getComment(id: $id) {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+query ListComments(
+  $filter: ModelCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
       content
-      price
-      rating
+      post {
+        id
+        title
+      }
     }
     nextToken
   }
