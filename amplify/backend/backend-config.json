@@ -1,10 +1,19 @@
 {
 	"api": {
-		"appsyncandroidcodege": {
+		"codegen": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
-				"securityType": "API_KEY"
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "codegen API key",
+							"apiKeyExpirationDays": "365"
+						}
+					}
+				}
 			}
 		}
 	}

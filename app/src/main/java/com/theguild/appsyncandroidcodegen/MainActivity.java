@@ -11,7 +11,7 @@ import com.amazonaws.mobileconnectors.appsync.fetcher.AppSyncResponseFetchers;
 import com.apollographql.apollo.GraphQLCall;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
-import com.amazonaws.amplify.generated.graphql.ListProductsQuery;
+import com.amazonaws.amplify.generated.graphql.ListBlogsQuery;
 
 import javax.annotation.Nonnull;
 
@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void runQuery() {
-        mAWSAppSyncClient.query(ListProductsQuery.builder().build())
+        mAWSAppSyncClient.query(ListBlogsQuery.builder().build())
                 .responseFetcher(AppSyncResponseFetchers.CACHE_AND_NETWORK)
                 .enqueue(todosCallback);
     }
 
-    private GraphQLCall.Callback<ListProductsQuery.Data> todosCallback = new GraphQLCall.Callback<ListProductsQuery.Data>() {
+    private GraphQLCall.Callback<ListBlogsQuery.Data> todosCallback = new GraphQLCall.Callback<ListBlogsQuery.Data>() {
         @Override
-        public void onResponse(@Nonnull Response<ListProductsQuery.Data> response) {
-            Log.i("Results", response.data().listProducts().items().toString());
+        public void onResponse(@Nonnull Response<ListBlogsQuery.Data> response) {
+            Log.i("Results", response.data().listBlogs().items().toString());
         }
 
         @Override

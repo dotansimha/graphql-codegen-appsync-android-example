@@ -1,28 +1,151 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateProduct {
-  onCreateProduct {
+subscription OnCreateBlog {
+  onCreateBlog {
     id
-    title
-    content
-    price
-    rating
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
   }
 }
-subscription OnUpdateProduct {
-  onUpdateProduct {
+subscription OnUpdateBlog {
+  onUpdateBlog {
     id
-    title
-    content
-    price
-    rating
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
   }
 }
-subscription OnDeleteProduct {
-  onDeleteProduct {
+subscription OnDeleteBlog {
+  onDeleteBlog {
+    id
+    name
+    posts {
+      items {
+        id
+        title
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreatePost {
+  onCreatePost {
     id
     title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdatePost {
+  onUpdatePost {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeletePost {
+  onDeletePost {
+    id
+    title
+    blog {
+      id
+      name
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreateComment {
+  onCreateComment {
+    id
     content
-    price
-    rating
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+subscription OnUpdateComment {
+  onUpdateComment {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+subscription OnDeleteComment {
+  onDeleteComment {
+    id
+    content
+    post {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
   }
 }
